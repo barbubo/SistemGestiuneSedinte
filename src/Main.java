@@ -15,15 +15,6 @@ public class Main {
                 new Time(13, 20, 0), room1);
         Meeting meeting1 = user1.getMeetings().get(0);
         user1.inviteParticipant(meeting1, user2);
-        user2.acceptMeeting(meeting1);
-        user1.viewSchedule();
-        user2.viewSchedule();
-        System.out.println();
-        user3.createMeeting("2", "Primul Meeting", new Date(124, 4, 26), new Time(12, 0, 0),
-                new Time(14, 20, 0), room1);
-        Meeting meeting2 = user3.getMeetings().get(0);
-        user3.inviteParticipant(meeting2, user1);
-        user1.acceptMeeting(meeting2);
-        user1.viewSchedule();
+        user1.inviteParticipant(meeting1, user3);
     }
 }

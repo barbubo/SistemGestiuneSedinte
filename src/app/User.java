@@ -139,11 +139,14 @@ public class User {
 
     public void inviteParticipant(Meeting meeting, User participant) {
         if (this.meetings.contains(meeting)) {
-            Notification notification = new Notification(meeting.getMeetingID() + participant.getUserID() + 'a', meeting, "You were invited to this meeting", participant);
-            notification.send();
-            ArrayList<Meeting> participantMeetings = participant.getMeetingInvitations();
-            participantMeetings.add(meeting);
-            participant.setMeetingInvitations(participantMeetings);
+            if (meeting.getRoom().getCapacity() > meeting.getInvitedParticipants().size() + 1) {
+                Notification notification = new Notification(meeting.getMeetingID() + participant.getUserID() + 'a', meeting, "You were invited to this meeting", participant);
+                notification.send();
+                ArrayList<Meeting> participantMeetings = participant.getMeetingInvitations();
+                participantMeetings.add(meeting);
+                participant.setMeetingInvitations(participantMeetings);
+                meeting.addInvitedParticipant(participant);
+            } else System.out.println("You can't invite people anymore. Room is full!");
         } else System.out.println("You can't invite participants to this meeting!");
     }
 

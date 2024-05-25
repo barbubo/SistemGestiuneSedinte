@@ -24,4 +24,13 @@ public class RoomSchedule {
     public ArrayList<Meeting> getMeetings() {
         return meetings;
     }
+
+    public void viewMeetings() {
+        for (Meeting meeting : this.meetings) {
+            System.out.println(meeting.getTitle() + "," + meeting.getRoom().getName());
+            System.out.print(meeting.getDate().getYear() + 1900 + "-");
+            System.out.println(meeting.getDate().getMonth() + 1 + "-" + meeting.getDate().getDate() + ","
+                    + meeting.getStartTime() + " - " + meeting.getEndTime());
+        }
+    }
 }

@@ -60,4 +60,9 @@ public class Room {
     public void releaseRoom(Meeting meeting) {
         this.schedule.removeMeeting(meeting);
     }
+
+    public void viewSchedule() {
+        System.out.println("------ROOM SCHEDULE-------");
+        this.schedule.viewMeetings();
+    }
 }

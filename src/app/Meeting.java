@@ -12,6 +12,7 @@ public class Meeting {
     private Time endTime;
     private User organizer;
     private ArrayList<User> participants;
+    private ArrayList<User> invitedParticipants;
     private Room room;
 
     public Meeting(String meetingID, String title, Date date, Time startTime, Time endTime, User organizer, Room room) {
@@ -24,6 +25,7 @@ public class Meeting {
         this.room = room;
         this.participants = new ArrayList<User>();
         this.participants.add(organizer);
+        this.invitedParticipants = new ArrayList<User>();
     }
 
     public String getMeetingID() {
@@ -90,8 +92,16 @@ public class Meeting {
         this.participants = participants;
     }
 
+    public ArrayList<User> getInvitedParticipants() {
+        return invitedParticipants;
+    }
+
     public void addParticipant(User participant) {
         this.participants.add(participant);
+    }
+
+    public void addInvitedParticipant(User participant) {
+        this.invitedParticipants.add(participant);
     }
 
     public void removeParticipant(User participant) {

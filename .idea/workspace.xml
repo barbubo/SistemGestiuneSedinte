@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52b0de0b-5506-4478-aa97-e065e67cc14e" name="Changes" comment="Gestiune Sedinte" />
+    <list default="true" id="52b0de0b-5506-4478-aa97-e065e67cc14e" name="Changes" comment="cod asezat">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Meeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Meeting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/RoomSchedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/RoomSchedule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/User.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +27,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "barbubo"
+  }
+}]]></component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/barbubo/SistemGestiuneSedinte.git",
@@ -78,7 +91,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1716638244455</updated>
-      <workItem from="1716638245582" duration="18276000" />
+      <workItem from="1716638245582" duration="19722000" />
     </task>
     <task id="LOCAL-00001" summary="Gestiune Sedinte">
       <option name="closed" value="true" />
@@ -88,7 +101,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716656497384</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="cod asezat">
+      <option name="closed" value="true" />
+      <created>1716656691552</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1716656691552</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -96,6 +117,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Gestiune Sedinte" />
-    <option name="LAST_COMMIT_MESSAGE" value="Gestiune Sedinte" />
+    <MESSAGE value="cod asezat" />
+    <option name="LAST_COMMIT_MESSAGE" value="cod asezat" />
   </component>
 </project>
