@@ -165,6 +165,12 @@ public class User {
         this.schedule.viewMeetings();
     }
 
+    //afiseaza programul unei sali
+    public void viewRoomSchedule(Room room) {
+        System.out.println("------ROOM SCHEDULE-------");
+        room.viewSchedule();
+    }
+
     //afiseaza toate notificarile
     public void viewNotifications() {
         System.out.println("------NOTIFICATIONS-------");
