@@ -47,12 +47,14 @@ public class Notification {
         this.recipient = recipient;
     }
 
+    //trimite notificarea catre recipient
     public void send() {
         ArrayList<Notification> notifications = this.recipient.getNotifications();
         notifications.add(this);
         this.recipient.setNotifications(notifications);
     }
 
+    //afiseaza continutul notificarii
     public void printNotification() {
         System.out.println(this.message);
         this.meeting.printMeeting();

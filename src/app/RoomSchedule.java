@@ -13,10 +13,12 @@ public class RoomSchedule {
         this.meetings = new ArrayList<Meeting>();
     }
 
+    //adauga meeting in program
     public void addMeeting(Meeting meeting) {
         meetings.add(meeting);
     }
 
+    //sterge un meeting din program
     public void removeMeeting(Meeting meeting) {
         meetings.remove(meeting);
     }
@@ -25,6 +27,7 @@ public class RoomSchedule {
         return meetings;
     }
 
+    //afiseaza meeting-urile din program
     public void viewMeetings() {
         for (Meeting meeting : this.meetings) {
             System.out.println(meeting.getTitle() + "," + meeting.getRoom().getName());

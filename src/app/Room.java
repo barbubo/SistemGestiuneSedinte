@@ -40,6 +40,7 @@ public class Room {
         this.capacity = capacity;
     }
 
+    //verifica daca mai exista un meeting in acelasi interval de timp
     public boolean checkAvailability(Date date, Time startTime, Time endTime) {
         for (Meeting meeting : this.schedule.getMeetings()) {
             if (meeting.getDate().getYear() == date.getYear() && meeting.getDate().getMonth() == date.getMonth()
@@ -53,14 +54,17 @@ public class Room {
         return true;
     }
 
+    //rezerva sala
     public void bookRoom(Meeting meeting) {
         this.schedule.addMeeting(meeting);
     }
 
+    //sterge rezervarea curenta
     public void releaseRoom(Meeting meeting) {
         this.schedule.removeMeeting(meeting);
     }
 
+    //afiseaza programul salii
     public void viewSchedule() {
         System.out.println("------ROOM SCHEDULE-------");
         this.schedule.viewMeetings();

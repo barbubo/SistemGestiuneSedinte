@@ -71,7 +71,9 @@ public class User {
         this.schedule = schedule;
     }
 
+    //creeaza meeting
     public void createMeeting(String meetingID, String title, Date date, Time startTime, Time endTime, Room room) {
+        //verifica daca mai exista un meeting in intervalul de timp dorit la care user-ul deja este participant
         boolean meetInTheSameInterval = false;
         for (Meeting m : this.schedule.getMeetings()) {
             if (date.getYear() == m.getDate().getYear() && date.getMonth() == m.getDate().getMonth() && date.getDate() == m.getDate().getDate() && (startTime.compareTo(m.getStartTime()) >= 0 && startTime.compareTo(m.getEndTime()) <= 0 || endTime.compareTo(m.getStartTime()) >= 0 && endTime.compareTo(m.getEndTime()) <= 0)) {
@@ -79,8 +81,8 @@ public class User {
                 break;
             }
         }
-        if (!meetInTheSameInterval) {
-            if (room.checkAvailability(date, startTime, endTime)) {
+        if (!meetInTheSameInterval) { //daca nu mai exista
+            if (room.checkAvailability(date, startTime, endTime)) { //verifica daca sala este disponibila
                 Meeting meeting = new Meeting(meetingID, title, date, startTime, endTime, this, room);
                 meetings.add(meeting);
                 room.bookRoom(meeting);
@@ -93,8 +95,9 @@ public class User {
         }
     }
 
+    //sterge meeting
     public void deleteMeeting(Meeting meeting) {
-        if (this.meetings.contains(meeting)) {
+        if (this.meetings.contains(meeting)) {//verifica daca user-ul a creat meeting-ul
             for (int i = 1; i <= meeting.getParticipants().size(); i++) {
                 meeting.removeParticipant(meeting.getParticipants().get(i));
             }
@@ -107,8 +110,10 @@ public class User {
         }
     }
 
+    //accepta un meeting la care a fost invitat
     public void acceptMeeting(Meeting meeting) {
-        if (this.meetingInvitations.contains(meeting)) {
+        if (this.meetingInvitations.contains(meeting)) {//verifica daca user-ul este invitat la meeting
+            //verifica daca mai exista un meeting in intervalul de timp dorit la care user-ul deja este participant
             boolean meetInTheSameInterval = false;
             for (Meeting m : this.schedule.getMeetings()) {
                 if (meeting.getDate().getYear() == m.getDate().getYear() && meeting.getDate().getMonth() == m.getDate().getMonth() && meeting.getDate().getDate() == m.getDate().getDate() && (meeting.getStartTime().compareTo(m.getStartTime()) >= 0 && meeting.getStartTime().compareTo(m.getEndTime()) <= 0 || meeting.getEndTime().compareTo(m.getStartTime()) >= 0 && meeting.getEndTime().compareTo(m.getEndTime()) <= 0)) {
@@ -128,8 +133,10 @@ public class User {
         }
     }
 
+    //elimina un participant din meeting
     public void removeParticipant(Meeting meeting, User participant) {
-        if (this.meetings.contains(meeting)) {
+        if (this.meetings.contains(meeting)) {//verifica daca user-ul a creat meeting-ul
+            //verifca daca user-ul care trebuie eliminat este participant al meeting-ului
             if (meeting.getParticipants().contains(participant)) meeting.removeParticipant(participant);
             else System.out.println("Participant does not exist in this meeting");
         } else {
@@ -137,8 +144,10 @@ public class User {
         }
     }
 
+    //invita un participant la meeting
     public void inviteParticipant(Meeting meeting, User participant) {
-        if (this.meetings.contains(meeting)) {
+        if (this.meetings.contains(meeting)) {//verifica daca user-ul a creat meeting-ul
+            //verifica daca mai exista loc in sala meeting-ului
             if (meeting.getRoom().getCapacity() > meeting.getInvitedParticipants().size() + 1) {
                 Notification notification = new Notification(meeting.getMeetingID() + participant.getUserID() + 'a', meeting, "You were invited to this meeting", participant);
                 notification.send();
@@ -150,11 +159,13 @@ public class User {
         } else System.out.println("You can't invite participants to this meeting!");
     }
 
+    //afiseaza programul de meeting-uri
     public void viewSchedule() {
         System.out.println("------SCHEDULE-------");
         this.schedule.viewMeetings();
     }
 
+    //afiseaza toate notificarile
     public void viewNotifications() {
         System.out.println("------NOTIFICATIONS-------");
         for (Notification notification : notifications) {
@@ -162,6 +173,7 @@ public class User {
         }
     }
 
+    //afiseaza id-urile meeting-urilor la care este invitat
     public void viewMeetingInvitations() {
         System.out.println("------MEETING INVITATIONS-------");
         for (Meeting meetingInvitation : meetingInvitations) {

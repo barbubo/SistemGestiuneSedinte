@@ -17,14 +17,17 @@ public class UserSchedule {
         return meetings;
     }
 
+    //adauga un meeting la programul user-ului
     public void addMeeting(Meeting meeting) {
         meetings.add(meeting);
     }
 
+    //sterge un meeting din programul user-ului
     public void removeMeeting(Meeting meeting) {
         meetings.remove(meeting);
     }
 
+    //afiseaza meeting-urile din programul user-ului
     public void viewMeetings() {
         for (Meeting meeting : this.meetings) {
             System.out.println(meeting.getTitle() + "," + meeting.getRoom().getName());

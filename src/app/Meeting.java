@@ -96,14 +96,17 @@ public class Meeting {
         return invitedParticipants;
     }
 
+    //adauga user la lista de participanti
     public void addParticipant(User participant) {
         this.participants.add(participant);
     }
 
+    //adauga user la lista de participanti invitati
     public void addInvitedParticipant(User participant) {
         this.invitedParticipants.add(participant);
     }
 
+    //sterge un user din lista de participanti
     public void removeParticipant(User participant) {
 //        this.participants.remove(participant);
         Notification notification = new Notification(this.meetingID + participant.getUserID() + 'r', this,
@@ -115,12 +118,14 @@ public class Meeting {
         this.participants.remove(participant);
     }
 
+    //sterge toti userii din lista de participanti
     public void deleteAllParticipants() {
         for (User participant : participants) {
             this.removeParticipant(participant);
         }
     }
 
+    //afiseaza detaliile meeting-ului
     public void printMeeting() {
         System.out.println("Meeting ID: " + meetingID);
         System.out.println("Title: " + title);
