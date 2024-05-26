@@ -13,12 +13,5 @@ public class Main {
         Room room1 = new Room("1", "Amfiteatru", 3);
         user1.createMeeting("1", "Primul Meeting", new Date(124, 4, 25), new Time(12, 0, 0),
                 new Time(13, 20, 0), room1);
-        Meeting meeting1 = user1.getMeetings().get(0);
-        user1.inviteParticipant(meeting1,user2);
-        user1.inviteParticipant(meeting1,user3);
-        user2.acceptMeeting(meeting1);
-        user3.acceptMeeting(meeting1);
-        //Elimina un participant care nu exista in meeting
-        user1.removeParticipant(meeting1,user4);
     }
 }
