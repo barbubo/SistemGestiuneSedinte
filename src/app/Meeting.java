@@ -116,6 +116,7 @@ public class Meeting {
         participant.setSchedule(schedule);
         notification.send();
         this.participants.remove(participant);
+        this.invitedParticipants.remove(participant);
     }
 
     //sterge toti userii din lista de participanti

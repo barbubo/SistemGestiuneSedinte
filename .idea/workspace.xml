@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52b0de0b-5506-4478-aa97-e065e67cc14e" name="Changes" comment="comentarii">
+    <list default="true" id="52b0de0b-5506-4478-aa97-e065e67cc14e" name="Changes" comment="final">
       <change afterPath="$PROJECT_DIR$/readme.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/UserTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemGestiuneSedinte.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SistemGestiuneSedinte.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diagrama_cazurilor_de_utilizare.vsdx" beforeDir="false" afterPath="$PROJECT_DIR$/diagrama_cazurilor_de_utilizare.vsdx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diagrama_de_clase.vsdx" beforeDir="false" afterPath="$PROJECT_DIR$/diagrama_de_clase.vsdx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Meeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Meeting.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,27 +24,28 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "barbubo"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;barbubo&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/barbubo/SistemGestiuneSedinte.git",
-    "accountId": "96804a14-0490-425f-90ca-c2ea2acbeb8d"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/barbubo/SistemGestiuneSedinte.git&quot;,
+    &quot;accountId&quot;: &quot;96804a14-0490-425f-90ca-c2ea2acbeb8d&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2gxTUBftCBfp5TLRYS31RrG6xtv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -50,8 +57,17 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.UserTest.executor": "Run",
+    "JUnit.UserTest.testInviteParticipant.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "create.test.in.the.same.root": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/UPB/III/ISP/Laboratorare/L6",
@@ -72,6 +88,38 @@
     ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="test" />
+      <recent name="app" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="UserTest.testInviteParticipant" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SistemGestiuneSedinte" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.UserTest" />
+      <option name="METHOD_NAME" value="testInviteParticipant" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.UserTest.testInviteParticipant" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -89,6 +137,8 @@
       <option name="presentableId" value="Default" />
       <updated>1716638244455</updated>
       <workItem from="1716638245582" duration="22712000" />
+      <workItem from="1716661055461" duration="258000" />
+      <workItem from="1716725105603" duration="4938000" />
     </task>
     <task id="LOCAL-00001" summary="Gestiune Sedinte">
       <option name="closed" value="true" />
@@ -122,7 +172,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716659310447</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="final">
+      <option name="closed" value="true" />
+      <created>1716661119549</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1716661119549</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,6 +191,7 @@
     <MESSAGE value="cod asezat" />
     <MESSAGE value="adaugat functionalitate pt capacitate maxima" />
     <MESSAGE value="comentarii" />
-    <option name="LAST_COMMIT_MESSAGE" value="comentarii" />
+    <MESSAGE value="final" />
+    <option name="LAST_COMMIT_MESSAGE" value="final" />
   </component>
 </project>

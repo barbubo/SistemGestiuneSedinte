@@ -148,13 +148,16 @@ public class User {
     public void inviteParticipant(Meeting meeting, User participant) {
         if (this.meetings.contains(meeting)) {//verifica daca user-ul a creat meeting-ul
             //verifica daca mai exista loc in sala meeting-ului
-            if (meeting.getRoom().getCapacity() > meeting.getInvitedParticipants().size() + 1) {
-                Notification notification = new Notification(meeting.getMeetingID() + participant.getUserID() + 'a', meeting, "You were invited to this meeting", participant);
-                notification.send();
-                ArrayList<Meeting> participantMeetings = participant.getMeetingInvitations();
-                participantMeetings.add(meeting);
-                participant.setMeetingInvitations(participantMeetings);
-                meeting.addInvitedParticipant(participant);
+            if (meeting.getRoom().getCapacity() > meeting.getInvitedParticipants().size() + 1) { //verifica daca participantul a fost deja invitat
+                if(!meeting.getInvitedParticipants().contains(participant)&&participant!=this) {
+                    Notification notification = new Notification(meeting.getMeetingID() + participant.getUserID() + 'a', meeting, "You were invited to this meeting", participant);
+                    notification.send();
+                    ArrayList<Meeting> participantMeetings = participant.getMeetingInvitations();
+                    participantMeetings.add(meeting);
+                    participant.setMeetingInvitations(participantMeetings);
+                    meeting.addInvitedParticipant(participant);
+                }
+                else System.out.println("Participant already invited");
             } else System.out.println("You can't invite people anymore. Room is full!");
         } else System.out.println("You can't invite participants to this meeting!");
     }
